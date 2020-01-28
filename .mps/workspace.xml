@@ -7,33 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42884c9-2151-4503-8cec-962de57dc420" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/BSicon/BSicon.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/BSicon.mpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/BSicon/models/BSicon.constraints.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/models/BSicon.constraints.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/BSicon/models/BSicon.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/models/BSicon.editor.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/BSicon/models/BSicon.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/models/BSicon.structure.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/BSicon/sandbox/models/BSicon.sandbox.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/sandbox/models/BSicon.sandbox.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/CommonMap.mpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/generator/templates/main@generator.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/models/CommonMap.behavior.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/models/CommonMap.constraints.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/models/CommonMap.editor.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/models/CommonMap.structure.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/models/CommonMap.typesystem.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/sandbox/CommonMap.sandbox.msd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/CommonMap/sandbox/models/CommonMap.sandbox.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/GuangzhouMetro.mpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/generator/templates/main@generator.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/models/GuangzhouMetro.behavior.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/models/GuangzhouMetro.constraints.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/models/GuangzhouMetro.editor.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/models/GuangzhouMetro.structure.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/models/GuangzhouMetro.typesystem.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/runtime/GuangzhouMetro.runtime.msd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/runtime/models/GuangzhouMetro.runtime.mps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/sandbox/GuangzhouMetro.sandbox.msd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/GuangzhouMetro/sandbox/models/GuangzhouMetro.sandbox.mps" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,16 +185,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -233,6 +200,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.editor.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,10 +246,6 @@
               <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.editor.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
           <SELECTED>
             <PATH_ELEMENT>
@@ -280,11 +257,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemId" value="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.editor.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1450400693214161905" />
+              <option name="myItemId" value="1450400693214291045" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
