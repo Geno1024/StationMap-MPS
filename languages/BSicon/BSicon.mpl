@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="GuangzhouMetro" uuid="bf5c934f-752c-46b5-a1c6-59de646e66b3" languageVersion="0" moduleVersion="0">
+<language namespace="BSicon" uuid="05bb09fc-66bd-44e7-93bd-bc317d9d2d02" languageVersion="0" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
   </models>
   <facets>
-    <facet type="java">
-      <classes generated="true" path="${module}/classes_gen" />
-    </facet>
+    <facet type="java" />
   </facets>
   <accessoryModels />
   <generators>
-    <generator alias="main" namespace="GuangzhouMetro#01" uuid="3ca60a9a-8a2e-4594-8b3d-9def185b2296">
+    <generator alias="main" namespace="BSicon#01" uuid="66ea1bc2-ef5d-425d-b12c-b51dbee54e68">
       <models>
         <modelRoot contentPath="${module}/generator" type="default">
           <sourceRoot location="templates" />
@@ -42,9 +40,9 @@
       </languageVersions>
       <dependencyVersions>
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-        <module reference="bf5c934f-752c-46b5-a1c6-59de646e66b3(GuangzhouMetro)" version="0" />
-        <module reference="3ca60a9a-8a2e-4594-8b3d-9def185b2296(GuangzhouMetro#01)" version="0" />
-        <module reference="9e62efd2-d285-4cf4-80fe-0abb1b2cf3af(GuangzhouMetro.runtime)" version="0" />
+        <module reference="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" version="0" />
+        <module reference="66ea1bc2-ef5d-425d-b12c-b51dbee54e68(BSicon#01)" version="0" />
+        <module reference="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003(BSicon.runtime)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
@@ -91,8 +89,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-    <module reference="0201b21f-c95b-47a4-8ada-f66052074a43(CommonMap)" version="0" />
-    <module reference="bf5c934f-752c-46b5-a1c6-59de646e66b3(GuangzhouMetro)" version="0" />
+    <module reference="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
@@ -101,7 +98,7 @@
     <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
   </dependencyVersions>
   <runtime>
-    <dependency reexport="false">9e62efd2-d285-4cf4-80fe-0abb1b2cf3af(GuangzhouMetro.runtime)</dependency>
+    <dependency reexport="false">e74f0e9f-ba75-4a09-95ee-d8d3ac85b003(BSicon.runtime)</dependency>
   </runtime>
   <extendedLanguages />
 </language>
