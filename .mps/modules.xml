@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/CommonMap/CommonMap.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/CommonMap/sandbox/CommonMap.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/GuangzhouMetro/GuangzhouMetro.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/GuangzhouMetro/runtime/GuangzhouMetro.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/GuangzhouMetro/sandbox/GuangzhouMetro.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
