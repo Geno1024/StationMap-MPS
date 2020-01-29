@@ -88,6 +88,26 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="1gwQVVP3YAZ" resolve="BlockPrefixStatus" />
     </node>
+    <node concept="1TJgyj" id="lfH4AVn7Iq" role="1TKVEi">
+      <property role="IQ2ns" value="382722722118794138" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elevation" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+    </node>
+    <node concept="1TJgyj" id="lfH4AVo29w" role="1TKVEi">
+      <property role="IQ2ns" value="382722722119033440" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="size" />
+      <ref role="20lvS9" node="lfH4AVnOWj" resolve="BlockPrefixSize" />
+    </node>
+    <node concept="1TJgyj" id="lfH4AVo2tE" role="1TKVEi">
+      <property role="IQ2ns" value="382722722119034730" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="modifier" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="lfH4AVnSoo" resolve="BlockPrefixModifier" />
+    </node>
     <node concept="1TJgyj" id="1gwQVVP0Szt" role="1TKVEi">
       <property role="IQ2ns" value="1450400693214218461" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -107,50 +127,209 @@
     <property role="TrG5h" value="STR" />
     <property role="R5$K2" value="true" />
     <property role="3GE5qa" value="root" />
+    <property role="R4oN_" value="Strecke (stretch, straight)" />
     <ref role="1TJDcQ" node="1gwQVVP0Szq" resolve="BlockRoot" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP14qx">
     <property role="EcuMT" value="1450400693214267041" />
     <property role="TrG5h" value="BlockPrefix" />
     <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="prefix" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP14q$">
     <property role="EcuMT" value="1450400693214267044" />
     <property role="TrG5h" value="BlockPrefixType" />
     <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="prefix" />
     <ref role="1TJDcQ" node="1gwQVVP14qx" resolve="BlockPrefix" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP14qB">
     <property role="EcuMT" value="1450400693214267047" />
     <property role="TrG5h" value="u" />
     <property role="3GE5qa" value="prefix.type" />
-    <property role="R4oN_" value="U-bahn / Underground" />
-    <property role="34LRSv" value="underground" />
+    <property role="R4oN_" value="Type u (U-Bahn, underground)" />
     <ref role="1TJDcQ" node="1gwQVVP14q$" resolve="BlockPrefixType" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP3Jeu">
     <property role="EcuMT" value="1450400693214966686" />
     <property role="3GE5qa" value="prefix.type" />
     <property role="TrG5h" value="f" />
+    <property role="R4oN_" value="Type f (footpath)" />
     <ref role="1TJDcQ" node="1gwQVVP14q$" resolve="BlockPrefixType" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP3Jev">
     <property role="EcuMT" value="1450400693214966687" />
     <property role="3GE5qa" value="prefix.type" />
     <property role="TrG5h" value="g" />
+    <property role="R4oN_" value="Type g (ground)" />
     <ref role="1TJDcQ" node="1gwQVVP14q$" resolve="BlockPrefixType" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP3YAZ">
     <property role="EcuMT" value="1450400693215029695" />
     <property role="TrG5h" value="BlockPrefixStatus" />
+    <property role="3GE5qa" value="prefix" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="1gwQVVP14qx" resolve="BlockPrefix" />
   </node>
   <node concept="1TIwiD" id="1gwQVVP44PS">
     <property role="EcuMT" value="1450400693215055224" />
     <property role="3GE5qa" value="prefix.status" />
     <property role="TrG5h" value="e" />
+    <property role="R4oN_" value="Status e (ehemals, secondary track under construction)" />
     <ref role="1TJDcQ" node="1gwQVVP3YAZ" resolve="BlockPrefixStatus" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVkn1Y">
+    <property role="EcuMT" value="382722722118070398" />
+    <property role="3GE5qa" value="prefix.status" />
+    <property role="TrG5h" value="x" />
+    <property role="R4oN_" value="Status x (ex, main track under construction)" />
+    <ref role="1TJDcQ" node="1gwQVVP3YAZ" resolve="BlockPrefixStatus" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVkn1Z">
+    <property role="EcuMT" value="382722722118070399" />
+    <property role="3GE5qa" value="prefix.status" />
+    <property role="TrG5h" value="m" />
+    <property role="R4oN_" value="Type m (mischbetrieb, &gt;1 type of line / color in one block)" />
+    <ref role="1TJDcQ" node="1gwQVVP3YAZ" resolve="BlockPrefixStatus" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVn5O_">
+    <property role="EcuMT" value="382722722118786341" />
+    <property role="3GE5qa" value="prefix" />
+    <property role="TrG5h" value="BlockPrefixElevation" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="1gwQVVP14qx" resolve="BlockPrefix" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVn7Iv">
+    <property role="EcuMT" value="382722722118794143" />
+    <property role="3GE5qa" value="prefix.elevation" />
+    <property role="TrG5h" value="l" />
+    <property role="R4oN_" value="Elevation l (legende, legend)" />
+    <ref role="1TJDcQ" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVntDP">
+    <property role="EcuMT" value="382722722118883957" />
+    <property role="3GE5qa" value="prefix.elevation" />
+    <property role="TrG5h" value="h" />
+    <property role="R4oN_" value="Elevation h (hochbahn, elevated line)" />
+    <ref role="1TJDcQ" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnEh9">
+    <property role="EcuMT" value="382722722118935625" />
+    <property role="3GE5qa" value="prefix.elevation" />
+    <property role="TrG5h" value="t" />
+    <property role="R4oN_" value="Elevation t (tunnelstrcke, underground line)" />
+    <ref role="1TJDcQ" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnIVE">
+    <property role="EcuMT" value="382722722118954730" />
+    <property role="3GE5qa" value="prefix.elevation" />
+    <property role="TrG5h" value="p" />
+    <property role="R4oN_" value="Elevation p (passed)" />
+    <ref role="1TJDcQ" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnKGt">
+    <property role="EcuMT" value="382722722118961949" />
+    <property role="3GE5qa" value="prefix.elevation" />
+    <property role="TrG5h" value="k" />
+    <property role="R4oN_" value="Elevation k (kombination, compound turn)" />
+    <ref role="1TJDcQ" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnM_4">
+    <property role="EcuMT" value="382722722118969668" />
+    <property role="3GE5qa" value="prefix.elevation" />
+    <property role="TrG5h" value="n" />
+    <property role="R4oN_" value="Elevation n (eng, thin line)" />
+    <ref role="1TJDcQ" node="lfH4AVn5O_" resolve="BlockPrefixElevation" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnOWj">
+    <property role="EcuMT" value="382722722118979347" />
+    <property role="3GE5qa" value="prefix" />
+    <property role="TrG5h" value="BlockPrefixSize" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="1gwQVVP14qx" resolve="BlockPrefix" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnSoo">
+    <property role="EcuMT" value="382722722118993432" />
+    <property role="3GE5qa" value="prefix" />
+    <property role="TrG5h" value="BlockPrefixModifier" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="1gwQVVP14qx" resolve="BlockPrefix" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVDv">
+    <property role="EcuMT" value="382722722119006815" />
+    <property role="3GE5qa" value="prefix.size" />
+    <property role="TrG5h" value="c" />
+    <property role="R4oN_" value="Size c (schmal, 1/4)" />
+    <ref role="1TJDcQ" node="lfH4AVnOWj" resolve="BlockPrefixSize" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVDw">
+    <property role="EcuMT" value="382722722119006816" />
+    <property role="3GE5qa" value="prefix.size" />
+    <property role="TrG5h" value="d" />
+    <property role="R4oN_" value="Size d (dunn, 1/2)" />
+    <ref role="1TJDcQ" node="lfH4AVnOWj" resolve="BlockPrefixSize" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVDx">
+    <property role="EcuMT" value="382722722119006817" />
+    <property role="3GE5qa" value="prefix.size" />
+    <property role="TrG5h" value="cd" />
+    <property role="R4oN_" value="Size cd (c + d, 3/4)" />
+    <ref role="1TJDcQ" node="lfH4AVnOWj" resolve="BlockPrefixSize" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVDy">
+    <property role="EcuMT" value="382722722119006818" />
+    <property role="3GE5qa" value="prefix.size" />
+    <property role="TrG5h" value="b" />
+    <property role="R4oN_" value="Size b (breit, 2)" />
+    <ref role="1TJDcQ" node="lfH4AVnOWj" resolve="BlockPrefixSize" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVDz">
+    <property role="EcuMT" value="382722722119006819" />
+    <property role="3GE5qa" value="prefix.size" />
+    <property role="TrG5h" value="v" />
+    <property role="R4oN_" value="Size v (close parallel lines)" />
+    <ref role="1TJDcQ" node="lfH4AVnOWj" resolve="BlockPrefixSize" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVFz">
+    <property role="EcuMT" value="382722722119006947" />
+    <property role="3GE5qa" value="prefix.modifier" />
+    <property role="TrG5h" value="M_C" />
+    <property role="34LRSv" value="C" />
+    <property role="R4oN_" value="Modifier C (cutt, opening cut line)" />
+    <ref role="1TJDcQ" node="lfH4AVnSoo" resolve="BlockPrefixModifier" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVF$">
+    <property role="EcuMT" value="382722722119006948" />
+    <property role="3GE5qa" value="prefix.modifier" />
+    <property role="TrG5h" value="M_D" />
+    <property role="34LRSv" value="D" />
+    <property role="R4oN_" value="Modifier D (damm, line on embankment)" />
+    <ref role="1TJDcQ" node="lfH4AVnSoo" resolve="BlockPrefixModifier" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVF_">
+    <property role="EcuMT" value="382722722119006949" />
+    <property role="3GE5qa" value="prefix.modifier" />
+    <property role="TrG5h" value="M_L" />
+    <property role="34LRSv" value="L" />
+    <property role="R4oN_" value="Modifier L (lucke, interruption to line)" />
+    <ref role="1TJDcQ" node="lfH4AVnSoo" resolve="BlockPrefixModifier" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVFA">
+    <property role="EcuMT" value="382722722119006950" />
+    <property role="3GE5qa" value="prefix.modifier" />
+    <property role="TrG5h" value="M_M" />
+    <property role="34LRSv" value="M" />
+    <property role="R4oN_" value="Modifier M (maske, mask)" />
+    <ref role="1TJDcQ" node="lfH4AVnSoo" resolve="BlockPrefixModifier" />
+  </node>
+  <node concept="1TIwiD" id="lfH4AVnVFB">
+    <property role="EcuMT" value="382722722119006951" />
+    <property role="3GE5qa" value="prefix.modifier" />
+    <property role="TrG5h" value="M_3" />
+    <property role="34LRSv" value="3" />
+    <property role="R4oN_" value="Modifier 3 (compound turn)" />
+    <ref role="1TJDcQ" node="lfH4AVnSoo" resolve="BlockPrefixModifier" />
   </node>
 </model>
 
