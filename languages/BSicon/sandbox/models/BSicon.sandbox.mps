@@ -10,6 +10,7 @@
       <concept id="1450400693214163633" name="BSicon.structure.Block" flags="ng" index="3x8A$f">
         <child id="1450400693214218461" name="root" index="3x8Pdz" />
         <child id="1450400693214272349" name="type" index="3x983z" />
+        <child id="1450400693215056971" name="status" index="3xc8ZP" />
       </concept>
       <concept id="1450400693214163630" name="BSicon.structure.RouteMapVerticalLine" flags="ng" index="3x8A$g">
         <child id="1450400693214163634" name="blocks" index="3x8A$c" />
@@ -18,18 +19,12 @@
         <child id="1450400693214163631" name="lines" index="3x8A$h" />
       </concept>
       <concept id="1450400693214232036" name="BSicon.structure.STR" flags="ng" index="3x8Qpq" />
-      <concept id="1450400693214267047" name="BSicon.structure.u" flags="ng" index="3x99Op" />
+      <concept id="1450400693214966686" name="BSicon.structure.f" flags="ng" index="3xbyww" />
+      <concept id="1450400693215055224" name="BSicon.structure.e" flags="ng" index="3xc9r6" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="779128492853369165" name="jetbrains.mps.lang.core.structure.SideTransformInfo" flags="ng" index="1KehLL">
-        <property id="779128492853934523" name="cellId" index="1K8rM7" />
-        <property id="779128492853699361" name="side" index="1Kfyot" />
       </concept>
     </language>
   </registry>
@@ -38,24 +33,13 @@
     <node concept="3x8A$g" id="1gwQVVP0SxJ" role="3x8A$h">
       <node concept="3x8A$f" id="1gwQVVP0Syc" role="3x8A$c">
         <node concept="3x8Qpq" id="1gwQVVP36x3" role="3x8Pdz" />
-        <node concept="3x99Op" id="1gwQVVP36xa" role="3x983z" />
+        <node concept="3xbyww" id="lfH4AViWI5" role="3x983z" />
       </node>
       <node concept="3x8A$f" id="1gwQVVP0Sy6" role="3x8A$c">
-        <node concept="3x8Qpq" id="1gwQVVP1VME" role="3x8Pdz">
-          <node concept="1KehLL" id="1gwQVVP3aJr" role="lGtFl">
-            <property role="1K8rM7" value="ReadOnlyModelAccessor_izxkry_a" />
-            <property role="1Kfyot" value="Fg1jLUVyTf/left" />
-          </node>
-        </node>
+        <node concept="3x8Qpq" id="1gwQVVP1VME" role="3x8Pdz" />
+        <node concept="3xbyww" id="1gwQVVP3XsS" role="3x983z" />
+        <node concept="3xc9r6" id="lfH4AVketd" role="3xc8ZP" />
       </node>
-      <node concept="3x8A$f" id="1gwQVVP0Syj" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0SyQ" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0Sz1" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0Sy1" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0SxX" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0Szd" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0SxU" role="3x8A$c" />
-      <node concept="3x8A$f" id="1gwQVVP0SxS" role="3x8A$c" />
     </node>
     <node concept="3x8A$g" id="1gwQVVP0SxL" role="3x8A$h" />
     <node concept="3x8A$g" id="1gwQVVP0SxO" role="3x8A$h">

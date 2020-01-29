@@ -12,8 +12,10 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
         <property id="4628067390765956807" name="final" index="R5$K2" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
       </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
@@ -79,6 +81,13 @@
       <property role="20kJfa" value="type" />
       <ref role="20lvS9" node="1gwQVVP14q$" resolve="BlockPrefixType" />
     </node>
+    <node concept="1TJgyj" id="1gwQVVP45hb" role="1TKVEi">
+      <property role="IQ2ns" value="1450400693215056971" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="status" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1gwQVVP3YAZ" resolve="BlockPrefixStatus" />
+    </node>
     <node concept="1TJgyj" id="1gwQVVP0Szt" role="1TKVEi">
       <property role="IQ2ns" value="1450400693214218461" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -116,7 +125,32 @@
     <property role="EcuMT" value="1450400693214267047" />
     <property role="TrG5h" value="u" />
     <property role="3GE5qa" value="prefix.type" />
+    <property role="R4oN_" value="U-bahn / Underground" />
+    <property role="34LRSv" value="underground" />
     <ref role="1TJDcQ" node="1gwQVVP14q$" resolve="BlockPrefixType" />
+  </node>
+  <node concept="1TIwiD" id="1gwQVVP3Jeu">
+    <property role="EcuMT" value="1450400693214966686" />
+    <property role="3GE5qa" value="prefix.type" />
+    <property role="TrG5h" value="f" />
+    <ref role="1TJDcQ" node="1gwQVVP14q$" resolve="BlockPrefixType" />
+  </node>
+  <node concept="1TIwiD" id="1gwQVVP3Jev">
+    <property role="EcuMT" value="1450400693214966687" />
+    <property role="3GE5qa" value="prefix.type" />
+    <property role="TrG5h" value="g" />
+    <ref role="1TJDcQ" node="1gwQVVP14q$" resolve="BlockPrefixType" />
+  </node>
+  <node concept="1TIwiD" id="1gwQVVP3YAZ">
+    <property role="EcuMT" value="1450400693215029695" />
+    <property role="TrG5h" value="BlockPrefixStatus" />
+    <ref role="1TJDcQ" node="1gwQVVP14qx" resolve="BlockPrefix" />
+  </node>
+  <node concept="1TIwiD" id="1gwQVVP44PS">
+    <property role="EcuMT" value="1450400693215055224" />
+    <property role="3GE5qa" value="prefix.status" />
+    <property role="TrG5h" value="e" />
+    <ref role="1TJDcQ" node="1gwQVVP3YAZ" resolve="BlockPrefixStatus" />
   </node>
 </model>
 
