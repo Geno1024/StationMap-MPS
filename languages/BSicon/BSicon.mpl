@@ -4,9 +4,14 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
+    <modelRoot contentPath="C:/Users/Geno1024/MPSProjects/StationMap/batik-bin-1.12.tar/batik-bin-1.12/batik-1.12/lib/batik-swing-1.12.jar!/" type="java_classes">
+      <sourceRoot location="." />
+    </modelRoot>
   </models>
   <facets>
-    <facet type="java" />
+    <facet type="java">
+      <classes generated="true" path="${module}/classes_gen" />
+    </facet>
   </facets>
   <accessoryModels />
   <generators>
@@ -52,6 +57,9 @@
       <mapping-priorities />
     </generator>
   </generators>
+  <stubModelEntries>
+    <stubModelEntry path="C:/Users/Geno1024/MPSProjects/StationMap/batik-bin-1.12.tar/batik-bin-1.12/batik-1.12/lib/batik-swing-1.12.jar" />
+  </stubModelEntries>
   <sourcePath />
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="9" />
