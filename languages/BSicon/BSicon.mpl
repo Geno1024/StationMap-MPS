@@ -7,6 +7,9 @@
     <modelRoot contentPath="C:/Users/Geno1024/MPSProjects/StationMap/batik-bin-1.12.tar/batik-bin-1.12/batik-1.12/lib/batik-swing-1.12.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
+    <modelRoot contentPath="C:/Users/Geno1024/MPSProjects/StationMap/batik-bin-1.12.tar/batik-bin-1.12/batik-1.12/lib/batik-dom-1.12.jar!/" type="java_classes">
+      <sourceRoot location="." />
+    </modelRoot>
   </models>
   <facets>
     <facet type="java">
@@ -59,6 +62,7 @@
   </generators>
   <stubModelEntries>
     <stubModelEntry path="C:/Users/Geno1024/MPSProjects/StationMap/batik-bin-1.12.tar/batik-bin-1.12/batik-1.12/lib/batik-swing-1.12.jar" />
+    <stubModelEntry path="C:/Users/Geno1024/MPSProjects/StationMap/batik-bin-1.12.tar/batik-bin-1.12/batik-1.12/lib/batik-dom-1.12.jar" />
   </stubModelEntries>
   <sourcePath />
   <languageVersions>
