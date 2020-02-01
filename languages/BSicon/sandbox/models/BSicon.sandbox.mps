@@ -4,13 +4,12 @@
   <languages>
     <use id="05bb09fc-66bd-44e7-93bd-bc317d9d2d02" name="BSicon" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="qcx4" ref="r:31f5b104-63d2-425e-bf5a-b1be1a204e0c(BSicon.plugin)" />
+  </imports>
   <registry>
     <language id="05bb09fc-66bd-44e7-93bd-bc317d9d2d02" name="BSicon">
-      <concept id="382722722119006951" name="BSicon.structure.M_3" flags="ng" index="2Y40UI" />
-      <concept id="382722722119006950" name="BSicon.structure.M_M" flags="ng" index="2Y40UJ" />
       <concept id="1450400693214163633" name="BSicon.structure.Block" flags="ng" index="3x8A$f">
-        <child id="382722722119034730" name="modifier" index="2YbTcz" />
         <child id="1450400693214218461" name="root" index="3x8Pdz" />
       </concept>
       <concept id="1450400693214163630" name="BSicon.structure.RouteMapVerticalLine" flags="ng" index="3x8A$g">
@@ -27,19 +26,15 @@
       </concept>
     </language>
   </registry>
-  <node concept="3x8A$l" id="lfH4AVlByM">
+  <node concept="3x8A$l" id="1uOzymW2R1O">
     <property role="TrG5h" value="f" />
-    <node concept="3x8A$g" id="7waSeO2VCFy" role="3x8A$h" />
-    <node concept="3x8A$g" id="7waSeO2VCF$" role="3x8A$h" />
-    <node concept="3x8A$g" id="7waSeO2VCFB" role="3x8A$h">
-      <node concept="3x8A$f" id="7waSeO2VCFF" role="3x8A$c">
-        <node concept="3x8Qpq" id="7waSeO2WfYg" role="3x8Pdz" />
-        <node concept="2Y40UJ" id="7waSeO2Xesh" role="2YbTcz" />
-        <node concept="2Y40UI" id="7waSeO2Xesl" role="2YbTcz" />
-        <node concept="2Y40UJ" id="7waSeO2Xesp" role="2YbTcz" />
-        <node concept="2Y40UJ" id="7waSeO2Xesx" role="2YbTcz" />
+    <node concept="3x8A$g" id="1uOzymW2RqJ" role="3x8A$h" />
+    <node concept="3x8A$g" id="1uOzymW2RqL" role="3x8A$h">
+      <node concept="3x8A$f" id="1uOzymW2RqO" role="3x8A$c">
+        <node concept="3x8Qpq" id="1uOzymW2Rr3" role="3x8Pdz" />
       </node>
     </node>
+    <node concept="3x8A$g" id="1uOzymW2RqV" role="3x8A$h" />
   </node>
 </model>
 

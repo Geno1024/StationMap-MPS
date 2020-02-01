@@ -7,9 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42884c9-2151-4503-8cec-962de57dc420" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/BSicon/BSicon.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/BSicon.mpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/BSicon/models/BSicon.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/models/BSicon.behavior.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/BSicon/models/BSicon.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/models/BSicon.editor.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/BSicon/runtime/BSicon.runtime.msd" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/runtime/BSicon.runtime.msd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/BSicon/sandbox/BSicon.sandbox.msd" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/sandbox/BSicon.sandbox.msd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/BSicon/sandbox/models/BSicon.sandbox.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/BSicon/sandbox/models/BSicon.sandbox.mps" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +27,16 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="0ca21d3f-6f4e-479a-8b96-e0306db28f21/r:e5242c5b-9d61-45d3-8004-acab2dcb7b9b(TempModule0ca21d3f-6f4e-479a-8b96-e0306db28f21/ConsoleModel_321359922823100)">
+            <model ref="e54cea00-bb5f-4f03-9943-c581efdfb7d6/r:96f38e61-ca85-44b0-b040-fd88f507f6ee(TempModulee54cea00-bb5f-4f03-9943-c581efdfb7d6/ConsoleModel_752512827100)">
               <persistence version="9" />
               <languages>
                 <use id="446c26eb-2b7b-4bf0-9b35-f83fa582753e" name="jetbrains.mps.lang.modelapi" version="0" />
+                <use id="05bb09fc-66bd-44e7-93bd-bc317d9d2d02" name="BSicon" version="0" />
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
               </languages>
               <imports>
                 <import index="ho0x" ref="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure)" />
+                <import index="ckaf" ref="r:6f617eb3-3588-419f-8486-1d8583ccda1e(BSicon.behavior)" />
                 <import index="tpek" ref="r:00000000-0000-4000-0000-011c895902c0(jetbrains.mps.baseLanguage.behavior)" />
                 <import index="dxwr" ref="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor)" />
                 <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
@@ -37,16 +44,49 @@
               </imports>
               <registry>
                 <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+                  <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
+                    <child id="1068498886297" name="rValue" index="37vLTx" />
+                    <child id="1068498886295" name="lValue" index="37vLTJ" />
+                  </concept>
                   <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
                     <child id="1197027771414" name="operand" index="2Oq$k0" />
                     <child id="1197027833540" name="operation" index="2OqNvi" />
                   </concept>
+                  <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
+                    <child id="1145553007750" name="creator" index="2ShVmc" />
+                  </concept>
                   <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
+                  <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+                    <child id="1068431790190" name="initializer" index="33vP2m" />
+                  </concept>
+                  <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
+                    <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
+                  </concept>
+                  <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+                  <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
+                    <child id="5680397130376446158" name="type" index="1tU5fm" />
+                  </concept>
+                  <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
+                    <child id="1068580123156" name="expression" index="3clFbG" />
+                  </concept>
+                  <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
+                    <child id="1068581517665" name="statement" index="3cqZAp" />
+                  </concept>
+                  <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
+                    <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
+                  </concept>
+                  <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
                   <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
                     <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
                   </concept>
                 </language>
+                <language id="05bb09fc-66bd-44e7-93bd-bc317d9d2d02" name="BSicon">
+                  <concept id="1450400693214163633" name="BSicon.structure.Block" flags="ng" index="3x8A$f" />
+                </language>
                 <language id="446c26eb-2b7b-4bf0-9b35-f83fa582753e" name="jetbrains.mps.lang.modelapi">
+                  <concept id="4733039728785194814" name="jetbrains.mps.lang.modelapi.structure.NamedNodeReference" flags="ng" index="ZC_QK">
+                    <reference id="7256306938026143658" name="target" index="2aWVGs" />
+                  </concept>
                   <concept id="361130699826193248" name="jetbrains.mps.lang.modelapi.structure.ModelPointer" flags="ng" index="1dCxOl">
                     <property id="1863527487546097494" name="modelId" index="1XweGQ" />
                     <child id="679099339649067980" name="name" index="1j$8Uc" />
@@ -57,15 +97,26 @@
                 </language>
                 <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
                   <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+                  <concept id="7400021826774799413" name="jetbrains.mps.lang.smodel.structure.NodePointerExpression" flags="ng" index="2tJFMh">
+                    <child id="7400021826774799510" name="ref" index="2tJFKM" />
+                  </concept>
                   <concept id="4065387505485742666" name="jetbrains.mps.lang.smodel.structure.ModelPointer_ResolveOperation" flags="ng" index="2yCiCJ" />
                   <concept id="4065387505485742749" name="jetbrains.mps.lang.smodel.structure.AbstractPointerResolveOperation" flags="ng" index="2yCiFS">
                     <child id="3648723375513868575" name="repositoryArg" index="Vysub" />
                   </concept>
+                  <concept id="1181949435690" name="jetbrains.mps.lang.smodel.structure.Concept_NewInstance" flags="nn" index="LFhST" />
                   <concept id="1181952871644" name="jetbrains.mps.lang.smodel.structure.Concept_GetAllSubConcepts" flags="nn" index="LSoRf">
                     <child id="1182506816063" name="smodel" index="1iTxcG" />
                   </concept>
+                  <concept id="3648723375513868532" name="jetbrains.mps.lang.smodel.structure.NodePointer_ResolveOperation" flags="ng" index="Vyspw" />
                   <concept id="2644386474300074836" name="jetbrains.mps.lang.smodel.structure.ConceptIdRefExpression" flags="nn" index="35c_gC">
                     <reference id="2644386474300074837" name="conceptDeclaration" index="35c_gD" />
+                  </concept>
+                  <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
+                    <child id="1180636770616" name="createdType" index="3zrR0E" />
+                  </concept>
+                  <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
+                    <reference id="1138405853777" name="concept" index="ehGHo" />
                   </concept>
                   <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
                     <reference id="1138056516764" name="link" index="3Tt5mk" />
@@ -74,7 +125,15 @@
                     <child id="1863527487546132519" name="modelRef" index="1XwpL7" />
                   </concept>
                 </language>
+                <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+                  <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+                    <property id="1169194664001" name="name" index="TrG5h" />
+                  </concept>
+                </language>
                 <language id="de1ad86d-6e50-4a02-b306-d4d17f64c375" name="jetbrains.mps.console.base">
+                  <concept id="7820875636626932768" name="jetbrains.mps.console.base.structure.AbstractPrintExpression" flags="ng" index="5bD3k">
+                    <child id="8365379837260461921" name="object" index="2v23J2" />
+                  </concept>
                   <concept id="1583916890557930028" name="jetbrains.mps.console.base.structure.ConsoleRoot" flags="ng" index="aymSD">
                     <child id="1583916890557930415" name="history" index="aymYE" />
                     <child id="1583916890557930417" name="commandHolder" index="aymYO" />
@@ -83,8 +142,12 @@
                   <concept id="7656298970878093785" name="jetbrains.mps.console.base.structure.BLExpression" flags="ng" index="f80E0">
                     <child id="7656298970878093890" name="expression" index="f80$r" />
                   </concept>
+                  <concept id="7600370246417552247" name="jetbrains.mps.console.base.structure.PrintExpression" flags="ng" index="ikQcf" />
                   <concept id="3939645998855102389" name="jetbrains.mps.console.base.structure.INodeWithReference" flags="ng" index="2o872s">
                     <reference id="328850564588043375" name="target" index="2qTbeR" />
+                  </concept>
+                  <concept id="2348043250037290416" name="jetbrains.mps.console.base.structure.IClickable" flags="ng" index="rb1_l">
+                    <property id="3894227536041201194" name="text" index="3QjdP_" />
                   </concept>
                   <concept id="2348043250037383180" name="jetbrains.mps.console.base.structure.NodeReferencePresentation" flags="ng" index="rbCND" />
                   <concept id="5758176878586720817" name="jetbrains.mps.console.base.structure.CommandHolderRef" flags="ng" index="2_V_lH">
@@ -92,6 +155,9 @@
                   </concept>
                   <concept id="351968380916615243" name="jetbrains.mps.console.base.structure.CommandHolder" flags="ng" index="2Clz$F">
                     <child id="351968380916615460" name="command" index="2Clzx4" />
+                  </concept>
+                  <concept id="5464054275389846505" name="jetbrains.mps.console.base.structure.BLCommand" flags="ng" index="2HLcI0">
+                    <child id="1769790395579689573" name="body" index="3RSQip" />
                   </concept>
                   <concept id="5637103006919121940" name="jetbrains.mps.console.base.structure.NodeResponseItem" flags="ng" index="Zy5X5">
                     <child id="5637103006919121941" name="node" index="Zy5X4" />
@@ -105,125 +171,327 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm">
                     <child id="7195119950189425818" name="item" index="18xWvz" />
                   </concept>
+                  <concept id="6558068108107691796" name="jetbrains.mps.console.base.structure.ExceptionHolder" flags="ng" index="3B$ksA">
+                    <property id="6558068108108282025" name="stackTrace" index="3BB$yr" />
+                  </concept>
                   <concept id="5842059399443118718" name="jetbrains.mps.console.base.structure.PastedNodeReference" flags="ng" index="1HAH1G" />
                 </language>
               </registry>
-              <node concept="aymSD" id="7Gj0Vlc7voF">
-                <node concept="3balQm" id="7Gj0Vlc7voG" role="aymYE">
-                  <node concept="2Clz$F" id="7Gj0Vlc7voH" role="18xWvz">
-                    <node concept="f80E0" id="7Gj0Vlc7voI" role="2Clzx4">
-                      <node concept="1HAH1G" id="7Gj0Vlc7voJ" role="f80$r">
+              <node concept="aymSD" id="7T7KWGHLqqX">
+                <node concept="3balQm" id="7T7KWGHLqqY" role="aymYE">
+                  <node concept="2Clz$F" id="7T7KWGHLqqZ" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqr0" role="2Clzx4">
+                      <node concept="1HAH1G" id="7T7KWGHLqr1" role="f80$r">
                         <ref role="2qTbeR" to="dxwr:1gwQVVP1rwN" />
                       </node>
                     </node>
                   </node>
-                  <node concept="ZBF_j" id="7Gj0Vlc7voK" role="18xWvz">
-                    <node concept="Zy5X5" id="7Gj0Vlc7voL" role="Zy5mW">
-                      <node concept="rbCND" id="7Gj0Vlc7voM" role="Zy5X4">
+                  <node concept="ZBF_j" id="7T7KWGHLqr2" role="18xWvz">
+                    <node concept="Zy5X5" id="7T7KWGHLqr3" role="Zy5mW">
+                      <node concept="rbCND" id="7T7KWGHLqr4" role="Zy5X4">
                         <ref role="2qTbeR" to="dxwr:1gwQVVP1rwN" />
                       </node>
                     </node>
                   </node>
-                  <node concept="2Clz$F" id="7Gj0Vlc7voN" role="18xWvz">
-                    <node concept="f80E0" id="7Gj0Vlc7voO" role="2Clzx4">
-                      <node concept="1HAH1G" id="7Gj0Vlc7voP" role="f80$r">
+                  <node concept="2Clz$F" id="7T7KWGHLqr5" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqr6" role="2Clzx4">
+                      <node concept="1HAH1G" id="7T7KWGHLqr7" role="f80$r">
                         <ref role="2qTbeR" to="dxwr:1gwQVVP1c6N" />
                       </node>
                     </node>
                   </node>
-                  <node concept="ZBF_j" id="7Gj0Vlc7voQ" role="18xWvz">
-                    <node concept="Zy5X5" id="7Gj0Vlc7voR" role="Zy5mW">
-                      <node concept="rbCND" id="7Gj0Vlc7voS" role="Zy5X4">
+                  <node concept="ZBF_j" id="7T7KWGHLqr8" role="18xWvz">
+                    <node concept="Zy5X5" id="7T7KWGHLqr9" role="Zy5mW">
+                      <node concept="rbCND" id="7T7KWGHLqra" role="Zy5X4">
                         <ref role="2qTbeR" to="dxwr:1gwQVVP1c6N" />
                       </node>
                     </node>
                   </node>
-                  <node concept="2Clz$F" id="7Gj0Vlc7voT" role="18xWvz">
-                    <node concept="f80E0" id="7Gj0Vlc7voU" role="2Clzx4">
-                      <node concept="2OqwBi" id="7Gj0Vlc7voV" role="f80$r">
-                        <node concept="1HAH1G" id="7Gj0Vlc7voW" role="2Oq$k0">
+                  <node concept="2Clz$F" id="7T7KWGHLqrb" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqrc" role="2Clzx4">
+                      <node concept="2OqwBi" id="7T7KWGHLqrd" role="f80$r">
+                        <node concept="1HAH1G" id="7T7KWGHLqre" role="2Oq$k0">
                           <ref role="2qTbeR" to="dxwr:1gwQVVP1c6N" />
                         </node>
-                        <node concept="2qgKlT" id="7Gj0Vlc7voX" role="2OqNvi">
+                        <node concept="2qgKlT" id="7T7KWGHLqrf" role="2OqNvi">
                           <ref role="37wK5l" to="tpek:i2fkDTg" resolve="canServeAsReturn" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="ZBF_j" id="7Gj0Vlc7voY" role="18xWvz">
-                    <node concept="Zy5XD" id="7Gj0Vlc7voZ" role="Zy5mW">
+                  <node concept="ZBF_j" id="7T7KWGHLqrg" role="18xWvz">
+                    <node concept="Zy5XD" id="7T7KWGHLqrh" role="Zy5mW">
                       <property role="Zy5T0" value="true" />
                     </node>
                   </node>
-                  <node concept="2Clz$F" id="7Gj0Vlc7vp0" role="18xWvz">
-                    <node concept="f80E0" id="7Gj0Vlc7vp1" role="2Clzx4">
-                      <node concept="2OqwBi" id="7Gj0Vlc7vp2" role="f80$r">
-                        <node concept="1HAH1G" id="7Gj0Vlc7vp3" role="2Oq$k0">
+                  <node concept="2Clz$F" id="7T7KWGHLqri" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqrj" role="2Clzx4">
+                      <node concept="2OqwBi" id="7T7KWGHLqrk" role="f80$r">
+                        <node concept="1HAH1G" id="7T7KWGHLqrl" role="2Oq$k0">
                           <ref role="2qTbeR" to="dxwr:1gwQVVP1c6N" />
                         </node>
-                        <node concept="3TrEf2" id="7Gj0Vlc7vp4" role="2OqNvi">
+                        <node concept="3TrEf2" id="7T7KWGHLqrm" role="2OqNvi">
                           <ref role="3Tt5mk" to="tpee:fzclF8k" resolve="expression" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="ZBF_j" id="7Gj0Vlc7vp5" role="18xWvz">
-                    <node concept="Zy5X5" id="7Gj0Vlc7vp6" role="Zy5mW">
-                      <node concept="rbCND" id="7Gj0Vlc7vp7" role="Zy5X4">
+                  <node concept="ZBF_j" id="7T7KWGHLqrn" role="18xWvz">
+                    <node concept="Zy5X5" id="7T7KWGHLqro" role="Zy5mW">
+                      <node concept="rbCND" id="7T7KWGHLqrp" role="Zy5X4">
                         <ref role="2qTbeR" to="dxwr:1gwQVVP1rwN" />
                       </node>
                     </node>
                   </node>
-                  <node concept="2Clz$F" id="7Gj0Vlc7vp8" role="18xWvz">
-                    <node concept="f80E0" id="7Gj0Vlc7vp9" role="2Clzx4">
-                      <node concept="2OqwBi" id="7Gj0Vlc7vpa" role="f80$r">
-                        <node concept="1HAH1G" id="7Gj0Vlc7vpb" role="2Oq$k0">
+                  <node concept="2Clz$F" id="7T7KWGHLqrq" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqrr" role="2Clzx4">
+                      <node concept="2OqwBi" id="7T7KWGHLqrs" role="f80$r">
+                        <node concept="1HAH1G" id="7T7KWGHLqrt" role="2Oq$k0">
                           <ref role="2qTbeR" to="dxwr:1gwQVVP1c6N" />
                         </node>
-                        <node concept="2qgKlT" id="7Gj0Vlc7vpc" role="2OqNvi">
+                        <node concept="2qgKlT" id="7T7KWGHLqru" role="2OqNvi">
                           <ref role="37wK5l" to="tpcu:hEwIMiw" resolve="getPresentation" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="ZBF_j" id="7Gj0Vlc7vpd" role="18xWvz">
-                    <node concept="Zy5XD" id="7Gj0Vlc7vpe" role="Zy5mW">
+                  <node concept="ZBF_j" id="7T7KWGHLqrv" role="18xWvz">
+                    <node concept="Zy5XD" id="7T7KWGHLqrw" role="Zy5mW">
                       <property role="Zy5T0" value="ExpressionStatement" />
                     </node>
                   </node>
-                  <node concept="2Clz$F" id="7Gj0Vlc7vpf" role="18xWvz">
-                    <node concept="f80E0" id="7Gj0Vlc7vpg" role="2Clzx4">
-                      <node concept="2OqwBi" id="7Gj0Vlc7vph" role="f80$r">
-                        <node concept="35c_gC" id="7Gj0Vlc7vpi" role="2Oq$k0">
+                  <node concept="2Clz$F" id="7T7KWGHLqrx" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqry" role="2Clzx4">
+                      <node concept="2OqwBi" id="7T7KWGHLqrz" role="f80$r">
+                        <node concept="35c_gC" id="7T7KWGHLqr$" role="2Oq$k0">
                           <ref role="35c_gD" to="ho0x:1gwQVVP14q$" resolve="BlockPrefixType" />
                         </node>
-                        <node concept="LSoRf" id="7Gj0Vlc7vpj" role="2OqNvi">
-                          <node concept="2OqwBi" id="7Gj0Vlc7vpk" role="1iTxcG">
-                            <node concept="1Xw6AR" id="7Gj0Vlc7vpl" role="2Oq$k0">
-                              <node concept="1dCxOl" id="7Gj0Vlc7vpm" role="1XwpL7">
+                        <node concept="LSoRf" id="7T7KWGHLqr_" role="2OqNvi">
+                          <node concept="2OqwBi" id="7T7KWGHLqrA" role="1iTxcG">
+                            <node concept="1Xw6AR" id="7T7KWGHLqrB" role="2Oq$k0">
+                              <node concept="1dCxOl" id="7T7KWGHLqrC" role="1XwpL7">
                                 <property role="1XweGQ" value="r:898f6663-8645-4250-8d9e-f73e6972e8ca" />
-                                <node concept="1j_P7g" id="7Gj0Vlc7vpn" role="1j$8Uc">
+                                <node concept="1j_P7g" id="7T7KWGHLqrD" role="1j$8Uc">
                                   <property role="1j_P7h" value="BSicon.sandbox" />
                                 </node>
                               </node>
                             </node>
-                            <node concept="2yCiCJ" id="7Gj0Vlc7vpo" role="2OqNvi">
-                              <node concept="10Nm6u" id="7Gj0Vlc7vpp" role="Vysub" />
+                            <node concept="2yCiCJ" id="7T7KWGHLqrE" role="2OqNvi">
+                              <node concept="10Nm6u" id="7T7KWGHLqrF" role="Vysub" />
                             </node>
                           </node>
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="ZBF_j" id="7Gj0Vlc7vpq" role="18xWvz">
-                    <node concept="Zy5XD" id="7Gj0Vlc7vpr" role="Zy5mW">
+                  <node concept="ZBF_j" id="7T7KWGHLqrG" role="18xWvz">
+                    <node concept="Zy5XD" id="7T7KWGHLqrH" role="Zy5mW">
                       <property role="Zy5T0" value="[BSicon.structure.BlockPrefixType, BSicon.structure.u]" />
                     </node>
                   </node>
+                  <node concept="2Clz$F" id="7T7KWGHLqrI" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqrJ" role="2Clzx4">
+                      <node concept="2OqwBi" id="7T7KWGHLqrK" role="f80$r">
+                        <node concept="2tJFMh" id="7T7KWGHLqrL" role="2Oq$k0">
+                          <node concept="ZC_QK" id="7T7KWGHLqrM" role="2tJFKM">
+                            <ref role="2aWVGs" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                          </node>
+                        </node>
+                        <node concept="Vyspw" id="7T7KWGHLqrN" role="2OqNvi">
+                          <node concept="10Nm6u" id="7T7KWGHLqrO" role="Vysub" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="ZBF_j" id="7T7KWGHLqrP" role="18xWvz">
+                    <node concept="Zy5X5" id="7T7KWGHLqrQ" role="Zy5mW">
+                      <node concept="rbCND" id="7T7KWGHLqrR" role="Zy5X4">
+                        <ref role="2qTbeR" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2Clz$F" id="7T7KWGHLqrS" role="18xWvz">
+                    <node concept="f80E0" id="7T7KWGHLqrT" role="2Clzx4">
+                      <node concept="2ShNRf" id="7T7KWGHLqrU" role="f80$r">
+                        <node concept="3zrR0B" id="7T7KWGHLqrV" role="2ShVmc">
+                          <node concept="3Tqbb2" id="7T7KWGHLqrW" role="3zrR0E">
+                            <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="ZBF_j" id="7T7KWGHLqrX" role="18xWvz">
+                    <node concept="Zy5X5" id="7T7KWGHLqrY" role="Zy5mW">
+                      <node concept="3x8A$f" id="7T7KWGHLqrZ" role="Zy5X4" />
+                    </node>
+                  </node>
+                  <node concept="2Clz$F" id="7T7KWGHLqs0" role="18xWvz">
+                    <node concept="2HLcI0" id="7T7KWGHLqs1" role="2Clzx4">
+                      <node concept="3clFbS" id="7T7KWGHLqs2" role="3RSQip">
+                        <node concept="3cpWs8" id="7T7KWGHLqs3" role="3cqZAp">
+                          <node concept="3cpWsn" id="7T7KWGHLqs4" role="3cpWs9">
+                            <property role="TrG5h" value="block" />
+                            <node concept="3Tqbb2" id="7T7KWGHLqs5" role="1tU5fm">
+                              <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                            </node>
+                            <node concept="2ShNRf" id="7T7KWGHLqs6" role="33vP2m">
+                              <node concept="3zrR0B" id="7T7KWGHLqs7" role="2ShVmc">
+                                <node concept="3Tqbb2" id="7T7KWGHLqs8" role="3zrR0E">
+                                  <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="7T7KWGHLqs9" role="3cqZAp">
+                          <node concept="37vLTI" id="7T7KWGHLqsa" role="3clFbG">
+                            <node concept="2OqwBi" id="7T7KWGHLqsb" role="37vLTx">
+                              <node concept="35c_gC" id="7T7KWGHLqsc" role="2Oq$k0">
+                                <ref role="35c_gD" to="ho0x:1gwQVVP0VR$" resolve="STR" />
+                              </node>
+                              <node concept="LFhST" id="7T7KWGHLqsd" role="2OqNvi" />
+                            </node>
+                            <node concept="2OqwBi" id="7T7KWGHLqse" role="37vLTJ">
+                              <node concept="37vLTw" id="7T7KWGHLqsf" role="2Oq$k0">
+                                <ref role="3cqZAo" node="7T7KWGHLqs4" resolve="block" />
+                              </node>
+                              <node concept="3TrEf2" id="7T7KWGHLqsg" role="2OqNvi">
+                                <ref role="3Tt5mk" to="ho0x:1gwQVVP0Szt" resolve="root" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="7T7KWGHLqsh" role="3cqZAp">
+                          <node concept="2OqwBi" id="7T7KWGHLqsi" role="3clFbG">
+                            <node concept="37vLTw" id="7T7KWGHLqsj" role="2Oq$k0">
+                              <ref role="3cqZAo" node="7T7KWGHLqs4" resolve="block" />
+                            </node>
+                            <node concept="2qgKlT" id="7T7KWGHLqsk" role="2OqNvi">
+                              <ref role="37wK5l" to="ckaf:3yMfCTfz3of" resolve="getIcon" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="ZBF_j" id="7T7KWGHLqsl" role="18xWvz">
+                    <node concept="Zy5X5" id="7T7KWGHLqsm" role="Zy5mW">
+                      <node concept="3B$ksA" id="7T7KWGHLqsn" role="Zy5X4">
+                        <property role="3BB$yr" value="java.lang.NoClassDefFoundError: org/apache/batik/script/Interpreter&#13;&#10;&#9;at java.base/java.lang.Class.getDeclaredMethods0(Native Method)&#13;&#10;&#9;at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)&#13;&#10;&#9;at java.base/java.lang.Class.getDeclaredMethod(Class.java:2473)&#13;&#10;&#9;at java.desktop/java.awt.Component.isCoalesceEventsOverriden(Component.java:6336)&#13;&#10;&#9;at java.desktop/java.awt.Component.isCoalesceEventsOverriden(Component.java:6325)&#13;&#10;&#9;at java.desktop/java.awt.Component$3.run(Component.java:6290)&#13;&#10;&#9;at java.desktop/java.awt.Component$3.run(Component.java:6288)&#13;&#10;&#9;at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;&#10;&#9;at java.desktop/java.awt.Component.checkCoalescing(Component.java:6287)&#13;&#10;&#9;at java.desktop/java.awt.Component.&lt;init&gt;(Component.java:6256)&#13;&#10;&#9;at java.desktop/java.awt.Container.&lt;init&gt;(Container.java:296)&#13;&#10;&#9;at java.desktop/javax.swing.JComponent.&lt;init&gt;(JComponent.java:598)&#13;&#10;&#9;at org.apache.batik.swing.gvt.JGVTComponent.&lt;init&gt;(JGVTComponent.java:221)&#13;&#10;&#9;at org.apache.batik.swing.svg.JSVGComponent.&lt;init&gt;(JSVGComponent.java:416)&#13;&#10;&#9;at org.apache.batik.swing.JSVGCanvas.&lt;init&gt;(JSVGCanvas.java:235)&#13;&#10;&#9;at org.apache.batik.swing.JSVGCanvas.&lt;init&gt;(JSVGCanvas.java:219)&#13;&#10;&#9;at BSicon.behavior.Block__BehaviorDescriptor.getIcon_id3yMfCTfz3of(Block__BehaviorDescriptor.java:43)&#13;&#10;&#9;at BSicon.behavior.Block__BehaviorDescriptor.invokeSpecial0(Block__BehaviorDescriptor.java:78)&#13;&#10;&#9;at jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor.invokeSpecial(BaseBHDescriptor.java:357)&#13;&#10;&#9;at jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor.invokeNonVirtualCommon(BaseBHDescriptor.java:305)&#13;&#10;&#9;at jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor.invokeNonVirtual(BaseBHDescriptor.java:281)&#13;&#10;&#9;at jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor.invoke(BaseBHDescriptor.java:242)&#13;&#10;&#9;at jetbrains.mps.core.aspects.behaviour.SMethodImpl.invoke0(SMethodImpl.java:151)&#13;&#10;&#9;at jetbrains.mps.core.aspects.behaviour.SMethodImpl.invoke(SMethodImpl.java:126)&#13;&#10;&#9;at ConsoleModel_302136393400.Main.execute(Main.java:21)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;&#10;&#9;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;&#10;&#9;at java.base/java.lang.reflect.Method.invoke(Method.java:566)&#13;&#10;&#9;at jetbrains.mps.console.base.behavior.GeneratedCommand__BehaviorDescriptor$1$1$2.run(GeneratedCommand__BehaviorDescriptor.java:81)&#13;&#10;&#9;at jetbrains.mps.smodel.WorkbenchModelAccess$UndoContextSetup.run(WorkbenchModelAccess.java:363)&#13;&#10;&#9;at jetbrains.mps.smodel.ActionDispatcher.dispatch(ActionDispatcher.java:85)&#13;&#10;&#9;at jetbrains.mps.smodel.ActionDispatcher.lambda$wrap$0(ActionDispatcher.java:107)&#13;&#10;&#9;at jetbrains.mps.smodel.ActionDispatcher.dispatch(ActionDispatcher.java:85)&#13;&#10;&#9;at jetbrains.mps.smodel.ActionDispatcher.lambda$wrap$0(ActionDispatcher.java:107)&#13;&#10;&#9;at jetbrains.mps.smodel.LockRunnable.run(LockRunnable.java:60)&#13;&#10;&#9;at com.intellij.openapi.application.impl.ApplicationImpl.runWriteAction(ApplicationImpl.java:885)&#13;&#10;&#9;at jetbrains.mps.smodel.TryRunPlatformWriteHelper.runWrite(TryRunPlatformWriteHelper.java:103)&#13;&#10;&#9;at jetbrains.mps.smodel.TryRunPlatformWriteHelper.lambda$withPlatformWrite$1(TryRunPlatformWriteHelper.java:96)&#13;&#10;&#9;at com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:220)&#13;&#10;&#9;at com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:178)&#13;&#10;&#9;at com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:168)&#13;&#10;&#9;at jetbrains.mps.smodel.WorkbenchModelAccess.executeCommand(WorkbenchModelAccess.java:303)&#13;&#10;&#9;at jetbrains.mps.smodel.ProjectModelAccess2.executeCommand(ProjectModelAccess2.java:35)&#13;&#10;&#9;at jetbrains.mps.console.base.behavior.GeneratedCommand__BehaviorDescriptor$1$1.run(GeneratedCommand__BehaviorDescriptor.java:78)&#13;&#10;&#9;at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:309)&#13;&#10;&#9;at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.doRun(LaterInvocator.java:441)&#13;&#10;&#9;at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.runNextEvent(LaterInvocator.java:424)&#13;&#10;&#9;at com.intellij.openapi.application.impl.LaterInvocator$FlushQueue.run(LaterInvocator.java:407)&#13;&#10;&#9;at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)&#13;&#10;&#9;at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)&#13;&#10;&#9;at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)&#13;&#10;&#9;at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;&#10;&#9;at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;&#10;&#9;at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;&#10;&#9;at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)&#13;&#10;&#9;at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:908)&#13;&#10;&#9;at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:781)&#13;&#10;&#9;at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:424)&#13;&#10;&#9;at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:698)&#13;&#10;&#9;at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:423)&#13;&#10;&#9;at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;&#10;&#9;at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;&#10;&#9;at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;&#10;&#9;at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;&#10;&#9;at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;&#10;&#9;at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;&#10;Caused by: java.lang.ClassNotFoundException: org.apache.batik.script.Interpreter&#13;&#10;&#9;at com.intellij.util.lang.UrlClassLoader.findClass(UrlClassLoader.java:307)&#13;&#10;&#9;at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)&#13;&#10;&#9;at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)&#13;&#10;&#9;at jetbrains.mps.classloading.ModuleClassLoader.loadFromParent(ModuleClassLoader.java:239)&#13;&#10;&#9;at jetbrains.mps.classloading.ModuleClassLoader.loadFromDeps(ModuleClassLoader.java:232)&#13;&#10;&#9;at jetbrains.mps.classloading.ModuleClassLoader.loadClass(ModuleClassLoader.java:132)&#13;&#10;&#9;at jetbrains.mps.classloading.ModuleClassLoader.loadClass(ModuleClassLoader.java:113)&#13;&#10;&#9;at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)&#13;&#10;&#9;... 67 more&#13;&#10;" />
+                        <property role="3QjdP_" value="java.lang.NoClassDefFoundError" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2Clz$F" id="7T7KWGHLqso" role="18xWvz">
+                    <node concept="2HLcI0" id="7T7KWGHLqsp" role="2Clzx4">
+                      <node concept="3clFbS" id="7T7KWGHLqsq" role="3RSQip">
+                        <node concept="3cpWs8" id="7T7KWGHLqsr" role="3cqZAp">
+                          <node concept="3cpWsn" id="7T7KWGHLqss" role="3cpWs9">
+                            <property role="TrG5h" value="block" />
+                            <node concept="3Tqbb2" id="7T7KWGHLqst" role="1tU5fm">
+                              <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                            </node>
+                            <node concept="2ShNRf" id="7T7KWGHLqsu" role="33vP2m">
+                              <node concept="3zrR0B" id="7T7KWGHLqsv" role="2ShVmc">
+                                <node concept="3Tqbb2" id="7T7KWGHLqsw" role="3zrR0E">
+                                  <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="7T7KWGHLqsx" role="3cqZAp">
+                          <node concept="37vLTI" id="7T7KWGHLqsy" role="3clFbG">
+                            <node concept="2OqwBi" id="7T7KWGHLqsz" role="37vLTx">
+                              <node concept="35c_gC" id="7T7KWGHLqs$" role="2Oq$k0">
+                                <ref role="35c_gD" to="ho0x:1gwQVVP0VR$" resolve="STR" />
+                              </node>
+                              <node concept="LFhST" id="7T7KWGHLqs_" role="2OqNvi" />
+                            </node>
+                            <node concept="2OqwBi" id="7T7KWGHLqsA" role="37vLTJ">
+                              <node concept="37vLTw" id="7T7KWGHLqsB" role="2Oq$k0">
+                                <ref role="3cqZAo" node="7T7KWGHLqss" resolve="block" />
+                              </node>
+                              <node concept="3TrEf2" id="7T7KWGHLqsC" role="2OqNvi">
+                                <ref role="3Tt5mk" to="ho0x:1gwQVVP0Szt" resolve="root" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="7T7KWGHLqsD" role="3cqZAp">
+                          <node concept="2OqwBi" id="7T7KWGHLqsE" role="3clFbG">
+                            <node concept="37vLTw" id="7T7KWGHLqsF" role="2Oq$k0">
+                              <ref role="3cqZAo" node="7T7KWGHLqss" resolve="block" />
+                            </node>
+                            <node concept="2qgKlT" id="7T7KWGHLqsG" role="2OqNvi">
+                              <ref role="37wK5l" to="ckaf:3yMfCTfz3of" resolve="getIcon" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2Clz$F" id="7T7KWGHLqsH" role="18xWvz">
+                    <node concept="2HLcI0" id="7T7KWGHLqsI" role="2Clzx4">
+                      <node concept="3clFbS" id="7T7KWGHLqsJ" role="3RSQip">
+                        <node concept="3cpWs8" id="7T7KWGHLqsK" role="3cqZAp">
+                          <node concept="3cpWsn" id="7T7KWGHLqsL" role="3cpWs9">
+                            <property role="TrG5h" value="block" />
+                            <node concept="3Tqbb2" id="7T7KWGHLqsM" role="1tU5fm">
+                              <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                            </node>
+                            <node concept="2ShNRf" id="7T7KWGHLqsN" role="33vP2m">
+                              <node concept="3zrR0B" id="7T7KWGHLqsO" role="2ShVmc">
+                                <node concept="3Tqbb2" id="7T7KWGHLqsP" role="3zrR0E">
+                                  <ref role="ehGHo" to="ho0x:1gwQVVP0FaL" resolve="Block" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="7T7KWGHLqsQ" role="3cqZAp">
+                          <node concept="37vLTI" id="7T7KWGHLqsR" role="3clFbG">
+                            <node concept="2OqwBi" id="7T7KWGHLqsS" role="37vLTx">
+                              <node concept="35c_gC" id="7T7KWGHLqsT" role="2Oq$k0">
+                                <ref role="35c_gD" to="ho0x:1gwQVVP0VR$" resolve="STR" />
+                              </node>
+                              <node concept="LFhST" id="7T7KWGHLqsU" role="2OqNvi" />
+                            </node>
+                            <node concept="2OqwBi" id="7T7KWGHLqsV" role="37vLTJ">
+                              <node concept="37vLTw" id="7T7KWGHLqsW" role="2Oq$k0">
+                                <ref role="3cqZAo" node="7T7KWGHLqsL" resolve="block" />
+                              </node>
+                              <node concept="3TrEf2" id="7T7KWGHLqsX" role="2OqNvi">
+                                <ref role="3Tt5mk" to="ho0x:1gwQVVP0Szt" resolve="root" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="7T7KWGHLqsY" role="3cqZAp">
+                          <node concept="ikQcf" id="7T7KWGHLqsZ" role="3clFbG">
+                            <node concept="2OqwBi" id="7T7KWGHLqt0" role="2v23J2">
+                              <node concept="37vLTw" id="7T7KWGHLqt1" role="2Oq$k0">
+                                <ref role="3cqZAo" node="7T7KWGHLqsL" resolve="block" />
+                              </node>
+                              <node concept="2qgKlT" id="7T7KWGHLqt2" role="2OqNvi">
+                                <ref role="37wK5l" to="ckaf:3yMfCTfz3of" resolve="getIcon" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="ZBF_j" id="7T7KWGHLqt3" role="18xWvz">
+                    <node concept="Zy5XD" id="7T7KWGHLqt4" role="Zy5mW">
+                      <property role="Zy5T0" value="org.apache.batik.swing.JSVGCanvas[,0,0,0x0,invalid,alignmentX=0.0,alignmentY=0.0,border=,flags=288,maximumSize=,minimumSize=java.awt.Dimension[width=100,height=100],preferredSize=java.awt.Dimension[width=200,height=200]]" />
+                    </node>
+                  </node>
                 </node>
-                <node concept="2Clz$F" id="7Gj0Vlc7vps" role="aymYO" />
-                <node concept="2_V_lH" id="7Gj0Vlc7vpt" role="1PhJh3">
-                  <ref role="2_V_lI" node="7Gj0Vlc7vps" resolve="CommandHolder" />
+                <node concept="2Clz$F" id="7T7KWGHLqt5" role="aymYO" />
+                <node concept="2_V_lH" id="7T7KWGHLqt6" role="1PhJh3">
+                  <ref role="2_V_lI" node="7T7KWGHLqt5" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -276,6 +544,11 @@
   <component name="ProjectId" id="1X17Djn8Mkn6kPQCTuDBxeW9UoE" />
   <component name="ProjectPluginManager">
     <option name="pluginsState">
+      <option name="BSicon.plugin.plugin.Plugin_ProjectPlugin">
+        <value>
+          <PluginState />
+        </value>
+      </option>
       <option name="jetbrains.mps.baseLanguage.lightweightdsl.pluginSolution.plugin.PluginSolution_ProjectPlugin">
         <value>
           <PluginState />
@@ -334,8 +607,23 @@
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
+      <pane id="FileSystem" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
@@ -364,7 +652,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003" />
+              <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -372,7 +660,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:d177645a-40a5-4b69-87c3-b3e7d6d2fe4d(BSicon.runtime) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/runtime/models/BSicon.runtime.mps]" />
+              <option name="myItemId" value="r:898f6663-8645-4250-8d9e-f73e6972e8ca(BSicon.sandbox) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/sandbox/models/BSicon.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,11 +670,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemId" value="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,7 +680,15 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
+              <option name="myItemId" value="2506cac4-a5d3-4887-9bfb-5bea477fdbbf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BSicon" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:05a47fc3-22d4-4c75-8485-c10cb69f0a8c(BSicon.plugin.plugin) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/solutions/BSicon.plugin/models/BSicon.plugin.plugin.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,115 +716,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prefix" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="root" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.editor.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prefix" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prefix" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="type" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prefix" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="status" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BSicon" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -564,11 +748,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BSicon" />
+              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,7 +758,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003" />
+              <option name="myItemId" value="2506cac4-a5d3-4887-9bfb-5bea477fdbbf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BSicon" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -592,7 +776,15 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.editor.mps]" />
+              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prefix" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="status" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -603,20 +795,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BSicon" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:898f6663-8645-4250-8d9e-f73e6972e8ca(BSicon.sandbox) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/sandbox/models/BSicon.sandbox.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,6 +838,144 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prefix" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prefix" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="type" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2506cac4-a5d3-4887-9bfb-5bea477fdbbf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="root" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="05bb09fc-66bd-44e7-93bd-bc317d9d2d02(BSicon)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:fdd8674d-2108-474e-8d73-b6b2f59fa15a(BSicon.editor) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.editor.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prefix" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BSicon" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:d177645a-40a5-4b69-87c3-b3e7d6d2fe4d(BSicon.runtime) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/runtime/models/BSicon.runtime.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e74f0e9f-ba75-4a09-95ee-d8d3ac85b003" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BSicon" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="65fc93a6-bf93-4c41-8615-32d86ed1fd2f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BSicon" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
           <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
@@ -670,13 +986,16 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:6f617eb3-3588-419f-8486-1d8583ccda1e(BSicon.behavior) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.behavior.mps]" />
+              <option name="myItemId" value="r:fb8f4919-0c91-43aa-9aef-7dbd9303dfef(BSicon.structure) in IdeaFile[path: C:/Users/Geno1024/MPSProjects/StationMap/languages/BSicon/models/BSicon.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1450400693214218458" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
         </subPane>
       </pane>
-      <pane id="FileSystem" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -686,8 +1005,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="last_opened_file_path" value="$USER_HOME$/MPSSamples.2019.2.1/progressIndicator" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -702,7 +1021,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Geno1024\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -712,7 +1031,12 @@
       <option name="presentableId" value="Default" />
       <updated>1580201628647</updated>
     </task>
-    <servers />
+    <servers>
+      <GitHub url="https://github.com">
+        <option name="repoAuthor" value="Geno1024" />
+        <option name="repoName" value="StationMap-MPS" />
+      </GitHub>
+    </servers>
   </component>
   <component name="UsagesViewTool">
     <version id="1" />
@@ -722,42 +1046,66 @@
     </default_view_options>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2076" y="4" key="#MPSPropertiesConfigurable" timestamp="1580383487717">
+    <state x="2076" y="4" key="#MPSPropertiesConfigurable" timestamp="1580553315932">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="2076" y="4" key="#MPSPropertiesConfigurable/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580383487717" />
-    <state x="2534" y="41" width="716" height="482" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard" timestamp="1580374730815">
+    <state x="2076" y="4" key="#MPSPropertiesConfigurable/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580553315932" />
+    <state x="2232" y="92" key="#Servers" timestamp="1580475214496">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="2534" y="41" width="716" height="482" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580374730815" />
+    <state x="2232" y="92" key="#Servers/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580475214496" />
+    <state x="2094" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580475263923">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2094" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580475263923" />
+    <state x="2534" y="41" width="716" height="482" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard" timestamp="1580547399559">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2534" y="41" width="716" height="482" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580547399559" />
     <state x="2445" y="130" key="#jetbrains.mps.ide.util.NodesChooser" timestamp="1580383578447">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
     <state x="2445" y="130" key="#jetbrains.mps.ide.util.NodesChooser/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580383578447" />
-    <state x="2399" y="83" key="FileChooserDialogImpl" timestamp="1580381143545">
+    <state x="2413" y="358" key="#jetbrains.mps.vcs.mergedriver.MergeDriverOptionDialog" timestamp="1580475226541">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="2399" y="83" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580381143545" />
-    <state x="2220" y="177" key="IDE.errors.dialog" timestamp="1580377745581">
+    <state x="2413" y="358" key="#jetbrains.mps.vcs.mergedriver.MergeDriverOptionDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580475226541" />
+    <state x="2370" y="189" key="#jetbrains.mps.workbench.dialogs.project.utildialogs.addmodelimport.AddRequiredModelImportsDialog2" timestamp="1580495129973">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="2220" y="177" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580377745581" />
-    <state x="2306" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1580377837569">
+    <state x="2370" y="189" key="#jetbrains.mps.workbench.dialogs.project.utildialogs.addmodelimport.AddRequiredModelImportsDialog2/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580495129973" />
+    <state x="2399" y="83" key="FileChooserDialogImpl" timestamp="1580553311407">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="2306" y="259" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580377837569" />
-    <state x="969" y="162" width="538" height="583" key="dock-window-1" timestamp="1580399061437">
+    <state x="2399" y="83" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580553311407" />
+    <state x="2220" y="177" key="IDE.errors.dialog" timestamp="1580551398124">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2220" y="177" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580551398124" />
+    <state x="2173" y="76" key="SettingsEditor" timestamp="1580481128439">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2173" y="76" key="SettingsEditor/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580481128439" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1580554347567">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580554347567" />
+    <state x="2306" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1580573482176">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2306" y="259" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580573482176" />
+    <state x="958" y="495" width="1038" height="841" key="dock-window-1" timestamp="1580573475683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="969" y="162" width="538" height="583" key="dock-window-1/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580399061437" />
+    <state x="958" y="495" width="1038" height="841" key="dock-window-1/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580573475683" />
     <state x="1235" y="219" key="jetbrains.mps.ide.editor.actions.HintsDialog" timestamp="1580288268027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1235" y="219" key="jetbrains.mps.ide.editor.actions.HintsDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580288268027" />
-    <state x="2461" y="124" key="jetbrains.mps.ide.ui.dialogs.properties.choosers.ChooserDialog" timestamp="1580383487043">
+    <state x="2033" y="55" width="1231" height="548" key="jetbrains.mps.ide.ui.dialogs.properties.choosers.ChooserDialog" timestamp="1580550114619">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="2461" y="124" key="jetbrains.mps.ide.ui.dialogs.properties.choosers.ChooserDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580383487043" />
+    <state x="2033" y="55" width="1231" height="548" key="jetbrains.mps.ide.ui.dialogs.properties.choosers.ChooserDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1580550114619" />
     <state x="2357" y="293" key="jetbrains.mps.workbench.dialogs.project.properties.project.ProjectPropertiesDialog" timestamp="1580217982130">
       <screen x="1920" y="0" width="1440" height="860" />
     </state>

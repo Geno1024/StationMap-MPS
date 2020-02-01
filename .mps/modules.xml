@@ -5,6 +5,7 @@
       <modulePath path="$PROJECT_DIR$/languages/BSicon/BSicon.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/BSicon/runtime/BSicon.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/BSicon/sandbox/BSicon.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/BSicon.plugin/BSicon.plugin.msd" folder="" />
     </projectModules>
   </component>
 </project>
